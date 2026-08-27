@@ -1,30 +1,30 @@
 <title>MetaPuppet クレジット</title>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700;800&family=Noto+Sans+JP:wght@400;500;700;900&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700;900&family=IBM+Plex+Mono:wght@400;500;700&display=swap');
 
 :root{
-  --paper:#faf9f6;
-  --paper-raised:#f2f0eb;
-  --ink:#171a1d;
-  --ink-soft:#4b5459;
-  --ink-faint:#8b9296;
-  --rule:#d8d5cd;
-  --rule-strong:#b9b5aa;
-  --accent:#b8500e;
-  --accent2:#14646b;
+  --paper:#020202;
+  --paper-raised:#0e0e10;
+  --ink:#f2f0ee;
+  --ink-soft:#9a9a9e;
+  --ink-faint:#5c5c60;
+  --rule:#232326;
+  --rule-strong:#35353a;
+  --accent:#e78fb3;
+  --accent2:#6fbfc4;
 }
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){
-    --paper:#15171a; --paper-raised:#1c1f22; --ink:#eeece6; --ink-soft:#b7bcbe;
-    --ink-faint:#797f82; --rule:#33373a; --rule-strong:#484d50;
-    --accent:#e0954f; --accent2:#6fbfc4;
+@media (prefers-color-scheme: light){
+  :root:not([data-theme="dark"]){
+    --paper:#faf9f6; --paper-raised:#f2f0eb; --ink:#171a1d; --ink-soft:#4b5459;
+    --ink-faint:#8b9296; --rule:#d8d5cd; --rule-strong:#b9b5aa;
+    --accent:#b8500e; --accent2:#14646b;
   }
 }
-:root[data-theme="dark"]{
-  --paper:#15171a; --paper-raised:#1c1f22; --ink:#eeece6; --ink-soft:#b7bcbe;
-  --ink-faint:#797f82; --rule:#33373a; --rule-strong:#484d50;
-  --accent:#e0954f; --accent2:#6fbfc4;
+:root[data-theme="light"]{
+  --paper:#faf9f6; --paper-raised:#f2f0eb; --ink:#171a1d; --ink-soft:#4b5459;
+  --ink-faint:#8b9296; --rule:#d8d5cd; --rule-strong:#b9b5aa;
+  --accent:#b8500e; --accent2:#14646b;
 }
 
 *{box-sizing:border-box;}
@@ -40,7 +40,7 @@ body{
 .page{max-width:720px; margin:0 auto; padding:70px 40px 90px;}
 
 .kicker{
-  font-family:"JetBrains Mono",monospace;
+  font-family:"IBM Plex Mono",monospace;
   font-size:11.5px;
   letter-spacing:.18em;
   color:var(--accent);
@@ -51,7 +51,7 @@ body{
 .kicker::before{content:""; width:26px; height:1px; background:var(--accent); display:inline-block;}
 
 h1{
-  font-family:"Shippori Mincho",serif;
+  font-family:"Hanken Grotesk","Noto Sans JP",sans-serif;
   font-weight:800;
   font-size:clamp(28px,5vw,40px);
   margin:0 0 16px;
@@ -65,7 +65,7 @@ h1{
 }
 
 h2{
-  font-family:"Shippori Mincho",serif;
+  font-family:"Hanken Grotesk","Noto Sans JP",sans-serif;
   font-size:19px;
   font-weight:700;
   border-top:1px solid var(--rule-strong);
@@ -75,7 +75,9 @@ h2{
 h2:first-of-type{border-top:none; padding-top:0;}
 
 p{margin:0 0 18px;}
-a{color:var(--accent2);}
+a{color:var(--accent2); text-decoration-color:var(--rule-strong); text-underline-offset:2px;}
+a:visited{color:var(--accent2);}
+a:hover{color:var(--accent);}
 
 .notice{
   background:var(--paper-raised);
@@ -94,9 +96,12 @@ table{
 }
 th{
   text-align:left;
-  font-size:12px;
-  font-weight:700;
-  color:var(--ink-soft);
+  font-family:"IBM Plex Mono",monospace;
+  font-size:11px;
+  letter-spacing:.04em;
+  font-weight:500;
+  color:var(--ink-faint);
+  text-transform:uppercase;
   border-bottom:1px solid var(--rule-strong);
   padding:8px 14px 8px 0;
 }
@@ -109,7 +114,7 @@ td{
 .back{
   display:inline-block;
   margin-top:50px;
-  font-family:"JetBrains Mono",monospace;
+  font-family:"IBM Plex Mono",monospace;
   font-size:12.5px;
   color:var(--ink-faint);
   text-decoration:none;
@@ -122,6 +127,7 @@ td{
 @media print{
   body{background:#fff;color:#111;}
   .page{max-width:none;}
+  a{color:#111; text-decoration:underline;}
 }
 </style>
 
@@ -135,36 +141,34 @@ td{
 
   <table>
     <tr><th>楽曲</th><th>使用シーン</th></tr>
-    <tr><td><a href="https://www.youtube.com/watch?v=LO40CaFEG5Y">Amber Decay</a></td><td>puppet / RVM / result</td></tr>
-    <tr><td><a href="https://www.youtube.com/watch?v=RW15j0ha1_M">Evento</a></td><td>first-person action</td></tr>
-    <tr><td><a href="https://www.youtube.com/watch?v=f5-lQZZgEXU">Serendipity March</a></td><td>intro / exhibition-loop ending</td></tr>
+    <tr><td><a href="https://www.youtube.com/watch?v=LO40CaFEG5Y">Amber Decay</a></td><td>人形を操作する場面・映像合成・結果表示</td></tr>
+    <tr><td><a href="https://www.youtube.com/watch?v=RW15j0ha1_M">Evento</a></td><td>一人称視点のアクション場面</td></tr>
+    <tr><td><a href="https://www.youtube.com/watch?v=f5-lQZZgEXU">Serendipity March</a></td><td>導入部、および展示ループの終了時</td></tr>
   </table>
   <div class="notice">本作は学生向けのVRコンテストに向けて制作した非商用のプロトタイプであり、音楽はその中の一要素であって、作品全体ではない。展示や配布の前に、権利者への確認、または収録範囲の見直しを行う予定である。</div>
 
   <h2>3Dモデル・アセット</h2>
   <p>キャラクターや背景の一部には、<a href="https://assetstore.unity.com/packages/3d/environments/polygon-prototype-pack-art-by-synty-137126">POLYGON Prototype Pack（Art by Synty）</a>をUnity Asset Store経由で使用している。</p>
-  <p>彫像を模したモデルとしては、サモトラケのニケ、ラオコーン像、アポロン・ベルヴェデーレ、ミケランジェロのダビデ像（頭部）の形状を使用している。いずれも著名な彫刻作品を再現した3Dモデルで、CC0（パブリックドメイン相当）またはCC-BY（表示さえすれば自由に利用可）で公開されているものを利用する想定である。</p>
+  <p>彫像を模したモデルとしては、サモトラケのニケ、ラオコーン像、アポロン・ベルヴェデーレ、ミケランジェロのダビデ像（頭部）の形状を使用している。いずれも著名な彫刻作品を再現・スキャンした3Dモデルで、CC0（パブリックドメイン相当）またはCC-BY（表示さえすれば自由に利用可）で公開されているものを利用している。</p>
 
   <table>
     <tr><th>モデル</th><th>出典</th></tr>
     <tr><td>アポロン・ベルヴェデーレ</td><td><a href="https://sketchfab.com/3d-models/apollo-belvedere-fe5c0cffdc2a4f3985872212c692af0c">Sketchfab</a></td></tr>
     <tr><td>サモトラケのニケ</td><td><a href="https://skfb.ly/oyn7n">Sketchfab</a></td></tr>
     <tr><td>ラオコーン像</td><td><a href="https://sketchfab.com/3d-models/laocoon-group-4e253a98bfc842cabfe7610c38daa7ab">Sketchfab</a></td></tr>
-    <tr><td>ダビデ像（頭部）</td><td><a href="https://www.myminifactory.com/object/3d-print-michelangelo-s-david-in-florence-italy-2052">MyMiniFactory</a>（ライセンスは配布元ページに記載、要確認のうえ表示）</td></tr>
+    <tr><td>ダビデ像（頭部）</td><td><a href="https://www.myminifactory.com/object/3d-print-michelangelo-s-david-in-florence-italy-2052">MyMiniFactory</a></td></tr>
   </table>
-  <p>展示・配布前に、各モデルの正確なライセンス条件をリンク先で確認し、CC-BYのダビデ像については作者名の表示を行う。このほかWoodmanという名称のキャラクターモデルも使用しているが、入手経路の記録が残っておらず、出典を特定できていない。</p>
 
   <h2>ソフトウェア・ライブラリ</h2>
   <table>
     <tr><th>名称</th><th>用途</th></tr>
-    <tr><td><a href="https://github.com/PeterL1n/RobustVideoMatting">RVM (Robust Video Matting)</a></td><td>人物マスキング</td></tr>
-    <tr><td><a href="https://github.com/open-mmlab/mmpose/tree/main/projects/rtmpose">RTMPose</a></td><td>姿勢推定</td></tr>
+    <tr><td><a href="https://github.com/PeterL1n/RobustVideoMatting">Robust Video Matting</a></td><td>映像から人物だけを切り出すマスキング処理</td></tr>
+    <tr><td><a href="https://github.com/open-mmlab/mmpose/tree/main/projects/rtmpose">RTMPose</a></td><td>体の関節位置の推定</td></tr>
     <tr><td><a href="https://onnxruntime.ai/">ONNX Runtime</a></td><td>推論エンジン（MITライセンス, Microsoft）</td></tr>
     <tr><td><a href="https://www.videolan.org/developers/x264.html">x264</a></td><td>映像エンコード</td></tr>
-    <tr><td><a href="https://github.com/CristianQiu/Unity-URP-Volumetric-Light">URP Volumetric Fog/Light</a></td><td>Unity用ボリューメトリックフォグ（CristianQiu氏）</td></tr>
+    <tr><td><a href="https://github.com/CristianQiu/Unity-URP-Volumetric-Light">URP Volumetric Fog/Light</a></td><td>Unity用のボリューメトリックフォグ（CristianQiu氏）</td></tr>
     <tr><td><a href="https://threejs.org/">three.js</a></td><td>このサイトのWebGL描画</td></tr>
   </table>
-  <p>各ライブラリの正確なライセンス条件は、リンク先のリポジトリを参照してほしい。この記録では要約や解釈を加えず、名称と用途のみを記載している。</p>
 
   <a class="back" href="https://meta-puppet.github.io/report/">← 実装記録に戻る</a>
 </div>
