@@ -40,9 +40,19 @@ body{
 .page{max-width:720px; margin:0 auto; padding:70px 40px 90px;}
 
 .site-header{
+  position:sticky;
+  top:0;
+  z-index:50;
+  width:100%;
+  background:color-mix(in srgb, var(--paper) 88%, transparent);
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--rule);
+}
+.site-header-inner{
   max-width:720px;
   margin:0 auto;
-  padding:22px 40px 0;
+  padding:16px 40px;
   display:flex;
   align-items:center;
   justify-content:space-between;
@@ -52,20 +62,20 @@ body{
   display:inline-flex;
   align-items:center;
   line-height:0;
-  opacity:.92;
+  opacity:.95;
   transition:opacity .15s ease;
 }
 .site-header .brand:hover{opacity:1;}
 .site-header img{
-  height:22px;
+  height:40px;
   width:auto;
   display:block;
 }
 .site-nav{
   display:flex;
-  gap:18px;
+  gap:22px;
   font-family:"IBM Plex Mono",monospace;
-  font-size:11.5px;
+  font-size:12.5px;
   letter-spacing:.04em;
 }
 .site-nav a{
@@ -161,6 +171,7 @@ td{
 .back:hover{color:var(--accent2);}
 
 @media print{
+  .site-header{display:none;}
   body{background:#fff;color:#111;}
   .page{max-width:none;}
   a{color:#111; text-decoration:underline;}
@@ -168,11 +179,13 @@ td{
 </style>
 
 <div class="site-header">
-  <a class="brand" href="https://meta-puppet.github.io/" aria-label="MetaPuppet トップへ戻る"><img src="mp_logo.png" alt="MetaPuppet"></a>
-  <nav class="site-nav">
-    <a href="https://meta-puppet.github.io/report/">実装記録</a>
-    <a href="https://meta-puppet.github.io/credits/" aria-current="page">クレジット</a>
-  </nav>
+  <div class="site-header-inner">
+    <a class="brand" href="https://meta-puppet.github.io/" aria-label="MetaPuppet トップへ戻る"><img src="mp_logo.png" alt="MetaPuppet"></a>
+    <nav class="site-nav">
+      <a href="https://meta-puppet.github.io/report/">実装記録</a>
+      <a href="https://meta-puppet.github.io/credits/" aria-current="page">クレジット</a>
+    </nav>
+  </div>
 </div>
 
 <div class="page">
